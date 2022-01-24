@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu:300,400&display=swap');
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Cuprum', sans-serif;
+
+$mainColor: #323334;
+$bgColor: #EBECED;
+$hColor: #97BC97;
+$linkColor: #3b99d4;
+
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+
+  color: $bgColor;
+  background-color: $bgColor;
+
+  background-color: white;
+
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.innerContainer>a, .logoSlogan>a{
+  text-decoration: none;
+}
+.headerContainer{
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #3d3e40;
+  background-color: $mainColor;
+  color: $bgColor;
+
+  width: 100%;
+  min-height: 48px;
+}
+.innerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+
+  margin: auto;
+  padding: 0;
+
+  width: 1024px;
+  min-height: 32px;
+}
+
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  margin-right: auto;
+}
+.imgContainer{
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  text-align: center;
+
+  height: 32px;
+  width: 32px;
+
+  background: white;
+
+  border: 1px solid $bgColor;
+  border-radius: 3px 3px 3px 3px;
+}
+
+#logo{
+  height: 16px;
+  width: 16px;
+  color: $mainColor;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: none;
+
+  padding: 0;
+  margin: 0 auto 0 auto;
+}
+
+.logoSlogan{
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  height: 32px;
+
+  margin: auto .8em;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+#slogan{
+  font-size: 1.3em;
+  color: $bgColor;
+}
+#sloganH{
+  font-weight: bold;
+  color: $hColor;
+}
+.sloganT{
+  color: $bgColor;
+}
+.sloganTH{
+  color: $hColor;
+}
+
+.navContainer{
+  display: flex;
+  align-items: center;
+
+  margin-right: 1em;
+
+  height: 23px;
+  border-right: 2px solid $hColor;
+}
+.navContainer>ul{
+  display: inline-flex;
+  justify-content: center;
+  list-style: none;
+
+  height: 23px;
+  padding: 0 1em;
+}
+.navContainer>ul>li{
+  justify-content: space-around;
+  margin: auto .5em;
+}
+.navContainer>ul>li>a{
+  color: $bgColor;
+
+  font-weight:lighter;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+}
+
+.navContainer>ul>li>a:hover{
+  color: $hColor;
+
+  font-family: 'Ubuntu', sans-serif;
+  border-bottom: 3px solid $hColor;
+  transition: all .3s ease;
+
+}
+
+.logContainer{
+  display: flex;
+  align-items: center;
+
+  // margin-left: auto;
+  margin-right: 1em;
+  padding: 0 .5em;
+
+  justify-content: center;
+  text-align: center;
+}
+.logContainer #errorMsg{
+    color: #f54242;
+    margin-right: 1.3em;
+
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logContainer #userNameMsg{
+    color: $bgColor;
+
+    margin-right: 1.3em;
+    margin-top: .2em;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.logContainer #userNameLog{
+    color: $hColor;
+
+    font-family: 'Roboto', sans-serif;
+}
+.logContainer #logOutBut{
+  height: 23px;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+
+  border: 1px solid $bgColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+  color: $bgColor;
+
+  cursor: pointer;
+}
+.logContainer #logOutBut:hover{
+  border: 1px solid $hColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+
+
+  transition: all .3s ease;
+}
+
+.logContainer>a{
+  text-decoration: none;
+  color: $bgColor;
+  font-family: 'Roboto', sans-serif;
+}
+.logForm{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.logForm>input[name="loginBar"],
+.logForm>input[name="pwdBar"]{
+  border: 3px solid $bgColor;
+  border-radius: 3px;
+  background-color: $bgColor;
+
+  transition: all .5s ease;
+
+  width: 80px;
+  margin: auto 1em auto auto;
+
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.logForm>input[name="loginBar"]:focus,
+.logForm>input[name="pwdBar"]:focus{
+  outline: none;
+  border-color: $hColor;
+
+  transition: border-color 1s ease;
+}
+.logForm>input[name="loginBar"]:focus{
+  width: 100px;
+  transition: width .5s ease;
+}
+.logForm>input[name="pwdBar"]:focus{
+  width: 120px;
+  transition: width .5s ease;
+}
+
+#logButton{
+  height: 23px;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+
+  border: 1px solid $bgColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+
+  cursor: pointer;
+}
+#logButton>img{
+  height: 16px;
+  width: 16px;
+  margin-top: 2px;
+}
+#logButton>span{
+  font-family: 'Roboto', sans-serif;
+  color: $bgColor;
+  margin-right: .3em;
+}
+
+#logButton:hover{
+  border: 1px solid $hColor;
+  border-radius: 3px;
+  background-color: $mainColor;
+
+  color: $hColor;
+  transition: all .3s ease;
+}
+
+
+.menuContainerAniIn{
+  transform: rotate(360deg);
+  transition: transform 1.5s ease;
+}
+.menuContainerAniOut{
+  transform: rotate(-360deg);
+  transition: transform 1.5s ease;
+}
+
+
+
+#menuContainer{
+  display: flex;
+  align-items: center;
+}
+#menuContainer>a{
+  display: flex;
+  align-self: center;
+  text-align: center;
+}
+#menuContainer>a>img{
+  max-height: 23px;
+  max-width: 23px;
+}
+
+// CONTENT CONTENT
+// CONTENT CONTENT
+// CONTENT CONTENT
+
+.contentContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  align-self: flex-end;
+
+  width: 100%;
+  max-height: 300px;
+
+  margin: 0;
+  padding: 0;
+
+  color: $mainColor;
+
+  font-family: 'Roboto', sans-serif;
+}
+.postContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  margin: 0 1em;
+  padding: 0;
+
+  width: 1024px;
+  height: auto;
+
+  background-color: white;
+  border: hidden;
+  border-radius: 6px 6px 0 0;
+}
+
+.postTable{
+  width: 100%;
+
+  border: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  border-collapse: collapse;
+
+  background-color: $bgColor;
+}
+.tableRow{
+  height: 25px;
+
+  text-align: left;
+}
+
+//TABLE HEADER
+.rowHeader{
+  background: #d1d1d1;
+  color: $mainColor;
+
+
+}
+.tableHeader{
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
+
+  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
+
+  height: 16px;
+
+  padding-left: .3em;
+
+  text-align: center;
+}
+.tableHeader form{
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+}
+.tableHeader button{
+  height: 19px;
+  width: 19px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 .1em;
+  padding: 0;
+}
+.tableHeader img{
+  height: 100%;
+  width: 100%;
+
+  padding: 0;
+}
+.tableHeader:hover{
+  color: $hColor;
+
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.firstCell{border-top-left-radius: 6px;}
+.lastCell{border-top-right-radius: 6px;}
+
+
+//TABLE CELL
+.tableCell{
+  font-size: .8em;
+  height: 20px;
+
+  padding-left: .3em;
+
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
+
+  border-collapse: collapse;
+
+  font-family: 'Ubuntu', sans-serif;
+}
+.tableCell form{
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+}
+.tableCell button{
+  height: 19px;
+  width: 19px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 .1em;
+  padding: 0;
+}
+.tableCell img{
+  height: 100%;
+  width: 100%;
+
+  padding: 0;
+}
+.postTable td:nth-child(1){
+  font-weight: bold;
+}
+.postTable th:nth-child(1),
+.postTable td:nth-child(1){
+  text-align: center;
+  padding: 0;
+  width: 2.5%;
+}
+.postTable th:nth-child(2){
+  width: 7.5%;
+}
+.postTable th:nth-child(3){
+  text-align: left;
+  width: 65%;
+}
+.postTable th:nth-child(4),
+.postTable td:nth-child(4),
+.postTable th:nth-child(5),
+.postTable td:nth-child(5),
+.postTable th:nth-child(6),
+.postTable td:nth-child(6){
+  text-align: center;
+
+  padding: 0 .3rem;
+}
+
+.postTable td:nth-child(5) a,
+.postTable td:nth-child(6) a{
+  text-decoration: none;
+  color: $linkColor;
+  font-weight: bold;
+}
+.postTable td:nth-child(5) a:hover,
+.postTable td:nth-child(6) a:hover{
+  color: $hColor;
+  transition: all .3s ease;
+}
+// BANNER BANNER BANNER
+// BANNER BANNER BANNER
+// BANNER BANNER BANNER
+
+.bannerContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  box-sizing: content-box;
+
+  width: 100%;
+  min-height: 300px;
+
+  background-color: white;
+  background-image: url('../assets/banner.jpg');
+}
+.bannerMessage{
+  align-items: center;
+  align-self: center;
+  text-align: center;
+
+  font-family: 'Roboto', sans-serif;
+}
+.bannerMessage h1, h3{
+  font-size: 1.5em;
+  margin: .3em 0 0 0;
+}
+.bannerMessage h3{
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: normal;
+}
+.bannerMessage p{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+// FOOTER FOOTER FOOTER
+// FOOTER FOOTER FOOTER
+// FOOTER FOOTER FOOTER
+
+.footerContainer{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+
+  background-color: $mainColor;
+}
+.footerInnerContainer{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 .5em;
+  margin: 0 1em;
+
+  max-width: 1024px;
+}
+
+.logoSloganF{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border-right: 2px groove $hColor;
+  padding-right: .4em;
+  height: 30px;
+
+  margin: 0;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+
+#sloganF{
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: bold;
+  color: $hColor;
+}
+#sloganHF{
+  font-weight: lighter;
+  color: $bgColor;
+}
+.socialFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-size: 1em;
+  margin: 0;
+}
+.socialFooter a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  margin: 0 .3em;
+}
+.socialFooter img{
+  height: 16px;
+  width: 16px;
+}
+.contactFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  font-size: 1em;
+  margin: 0 0 .5em 0;
+}
+.contactFooter h1, h2{
+  margin: 0;
+  padding: 0;
+
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+.contactFooter p{
+  margin: 0;
+  padding: .3em;
+}
+
+.under{
+  display: inline-flex;
+}
+.over{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: .8em .8em .3em .8em;
+}
+
+.infoFooter{
+  display: flex;
+  height: 30px;
+
+  padding: .3em;
+}
+.cellFooter{
+  display: inline-flex;
+  align-items: center;
+  align-content: flex-end;
+}
+.cellFooter img{
+  height: 16px;
+}
+.cellFooter p{
+  margin-bottom: .3em;
+}
+
+// CARD CARD CARD
+// CARD CARD CARD
+// CARD CARD CARD
+
+.cardContainer{
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.cardInner{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 1024px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  color: $mainColor;
+
+  background-color: white;
+  border: 1px solid $bgColor;
+
+  width: 280px;
+  height: 330px;
+
+  margin: 2em 1em;
+}
+
+.cardThumb{
+  max-width: 100%;
+  max-height: 150px;
+
+  border-bottom: 1px solid $bgColor;
+
+  margin: 0;
+  padding: 0;
+}
+.cardThumb img{
+  width: 100%;
+  height: 100%;
+}
+.cardTitle{
+  width: 100%;
+  padding: .5em;
+}
+.cardTitle h1{
+  padding: 0;
+  margin: 0;
+
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.cardDescription{
+  width: 100%;
+  height: 100px;
+
+  padding: 0 .8em;
+  text-align: justify;
+}
+.cardButtonDiv{
+  width: 100%;
+  height: 40px;
+
+}
+#cardButton, #cardButton a{
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+
+  border: none;
+
+  color: $bgColor;
+  background-color: $mainColor;
+}
+#cardButton a{
+  width: 100%;
+  height: 100%;
+}
+#cardButton:hover, #cardButton a:hover{
+  color: $mainColor;
+  background-color: $bgColor;
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+#cardButton:focus, #cardButton a:focus{
+  outline:none;
+}
+
+
+
+// DEIXAR POR ULTIMO
+// DEIXAR POR ULTIMO
+// DEIXAR POR ULTIMO
+@media all and (min-width: 1025px){
+.logContainer{
+    display: flex;
+  }
+}
+@media all and (max-width: 1024px){
+.logContainer{
+    display: none;
+  }
+.logoContainer{
+    margin-left: 2em;
+  }
+
+.bannerContainer{
+  display:none;
+}
+  #menuContainer{
+    display: flex;
+    margin-right: 2em;
+  }
+  .contentContainer{
+    display:none;
+  }
+}
+@media all and (max-width: 600px){
+.navContainer{
+  display: flex;
+}
+.logContainer, .navContainer{
+    display: none;
+  }
+.logoContainer{
+    margin-left: 1em;
+  }
+  #menuContainer{
+    display: flex;
+    margin-right: 1em;
+  }
+}
